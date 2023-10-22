@@ -288,4 +288,5 @@ The instruction to return postcodes near a location for a given latitude and lon
 
 - I would like to make improvement to the error capturing by making use of error handler in laravel, make use of JsonResponse error handling
 - Check the quality of code by using tools like PHPsniffer, PHP-CS-Fixer with PSR2 and Symfony standards (much extra checks, closer to Laravel than PSR2).
-- Righting test cases using PHPUnit functional and unit testing.
+- Writing test cases using PHPUnit functional and unit testing.
+- Kept the code as simple as possible and following S.O.L.I.D princples.
