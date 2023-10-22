@@ -42,7 +42,7 @@ This would create all the basic tables to run your application smoothly. I have 
 
 ## Security
 
-For API authentication / security i have implemented the JWT auth instead of using santum or OAuth. JSON Web Token (JWT) is an open standard that allows two parties to securely send data and information as JSON objects. This information can be verified and trusted because it is digitally signed. JWT authentication has aided the wider adoption of stateless API services.
+For API authentication / security i have implemented the JWT auth instead of using sanctum or OAuth. JSON Web Token (JWT) is an open standard that allows two parties to securely send data and information as JSON objects. This information can be verified and trusted because it is digitally signed. JWT authentication has aided the wider adoption of stateless API services.
 
 Once your dependencies are download and tables created next would be setting up your JWT authentication key in the .env or enviorment file. This can be accomplished by running the command below
 
@@ -288,5 +288,9 @@ The instruction to return postcodes near a location for a given latitude and lon
 
 - I would like to make improvement to the error capturing by making use of error handler in laravel, make use of JsonResponse error handling
 - Check the quality of code by using tools like PHPsniffer, PHP-CS-Fixer with PSR2 and Symfony standards (much extra checks, closer to Laravel than PSR2).
-- Writing test cases using PHPUnit functional and unit testing.
+- Writing unit tests and integration tests to ensure API functionality
 - Keep the code as simple as possible and following S.O.L.I.D princples.
+- Use HTTP status codes to indicate the success or failure of requests.(200, 201, 204, 400, 404)
+- Improving validation of inputs.
+- Leverage caching techniques to improve API response times like Redis or Memcached.
+- 
