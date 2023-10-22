@@ -18,7 +18,7 @@ Via Composer
 $ composer install
 ```
 
-Once your dependencies are download next would be set up your JWT authentication key in the .env or enviorment file. This can be accomplished by running the command below
+Once your dependencies are download next would be setting up your JWT authentication key in the .env or enviorment file. This can be accomplished by running the command below
 
 ```bash
 $ php artisan jwt:secret
