@@ -18,12 +18,6 @@ Via Composer
 $ composer install
 ```
 
-Once your dependencies are download next would be setting up your JWT authentication key in the .env or enviorment file. This can be accomplished by running the command below
-
-```bash
-$ php artisan jwt:secret
-```
-
 Now lets move on to creating our tables by running the artisan migration command along with the seeder to populate the Users table with a basic user account.
 
 ```bash
@@ -36,4 +30,14 @@ This would create all the basic tables to run your application smoothly. I have 
 // User account
    Email : admin@passenger.tech
    Password : adminadmin
+```
+
+## Security
+
+For API authentication i implemented the JWT auth instead of using santum or OAuth. JSON Web Token (JWT) is an open standard that allows two parties to securely send data and information as JSON objects. This information can be verified and trusted because it is digitally signed. JWT authentication has aided the wider adoption of stateless API services.
+
+Once your dependencies are download and tables created next would be setting up your JWT authentication key in the .env or enviorment file. This can be accomplished by running the command below
+
+```bash
+$ php artisan jwt:secret
 ```
