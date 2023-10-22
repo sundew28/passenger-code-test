@@ -58,6 +58,8 @@ JWT_SECRET=AYBKioTi6AOI1EOEMJkmrH8vHDquUnmot4ff6w7d4XBB3WC93ceqmSMJAtW8kxco
 
 ## Testing the Application
 
+All API endpoints require a post request to be made which is already made mandatory in the api route file for secure transfer of data.
+
 ### Task 1) 
 
 The instructions were to download and import postcodes into a database through a console command. You can use the below command to enter a postcode and grab the details and it being stored in the database table 'post_codes'.
@@ -70,9 +72,35 @@ $ php artisan app:import-post-codes
 
 The instructions were to enter a partial string matches (postcode) and grab the all possible postcodes and return back as a json response. I have used postman for testing my API end points created in the routes/api.php. Before checking you start to test the endpoint you will need to generate a JWT token inorder to see the controller in action found in app/Http/Controllers/PostCodesController.php
 
+All endpoints require a post request to be made which is already made mandatory in the api route file for secure transfer of data.
+
 ```bash
-Url : <define your localhost with port/ virtual domain>localhost/api/login
+Url : <define your localhost with port/virtual domain> localhost/api/login
 Params : 
 - email <already a user account with email created. Please refer the doc for the informations>,
 - password
+```
+The API will return you with a secure token generated for use. Next you can use the token be set under the Authorization tab.
+
+```
+Authorization --> Type (Select Bearer Token)
+```
+
+The partial string can be send to the end point 'partialstring' through the Url :- http://passenger/api/partialstring which will return a Json response. for example like below.
+
+```
+{
+    "PostCodes": [
+        "AB10 1AB",
+        "AB10 1AF",
+        "AB10 1AG",
+        "AB10 1AH",
+        "AB10 1AL",
+        "AB10 1AN",
+        "AB10 1AP",
+        "AB10 1AQ",
+        "AB10 1AR",
+        "AB10 1AS"
+    ]
+}
 ```
