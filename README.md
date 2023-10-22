@@ -6,7 +6,7 @@ I have used the application working around [postcodes.io](https://postcodes.io/)
 ## Requirements
 
 - PHP :- 8 or above
-- MySQL :-5 or above
+- MySQL :- 5.6 or above
 - Composer :- To install the dependencies
 - Postman :- To test the API calls
 
@@ -86,7 +86,7 @@ The API will return you with a secure token generated for use. Next you can use 
 Authorization --> Type (Select Bearer Token)
 ```
 
-The partial string can be sent to the end point 'partialstring' through the Url :- http://passenger/api/partialstring which will return a Json response. for example like below. Else it will generate a error response.
+The partial string can be sent to the end point 'partialstring' through the Url :- http://localhost/api/partialstring which will return a Json response. for example like below. Else it will generate a error response.
 
 ```
 {
@@ -107,7 +107,7 @@ The partial string can be sent to the end point 'partialstring' through the Url 
 
 ### Task 3)
 
-The instruction to return postcodes near a location for a given latitude and longitude. The endpoint to call is 'longlat' through the Url :- http://passenger/api/longlat which will return a Json response. for example like below. Else it will generate a error response.
+The instruction to return postcodes near a location for a given latitude and longitude. The endpoint to call is 'longlat' through the Url :- http://localhost/api/longlat which will return a Json response. for example like below. Else it will generate a error response.
 
 ```
  {
