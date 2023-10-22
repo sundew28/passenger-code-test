@@ -1,6 +1,6 @@
 # Passenger Code Test
 
-A application to download and store postcodes and retrieve post codes on partial partial input (eg: M14 or M13 or AB10 or anything you wish you check for post coees) and postcodes on longitude and latitude entered. I have used laravel 10 framework to create the application and JWT to set up the authentication.
+An application to download and store postcodes and retrieve post codes on partial partial input (eg: M14 or M13 or AB10 or anything you wish you check for post codes) and postcodes on longitude and latitude entered. I have used laravel 10 framework to create the application and JWT to set up the authentication.
 
 ## Install
 
@@ -10,7 +10,7 @@ Clone the repo to your working directory using your favorite CLI console (eg: Gi
 $ git clone https://github.com/sundew28/passenger-code-test.git
 ```
 
-Once you are done cloning the repo next would be to run composer in your console to install laravel framework dependencies by running the below composer command.
+Once you are done cloning the repo next would be to run composer in your console to install laravel framework dependencies by running the below composer command. Make sure you have composer installed
 
 Via Composer
 
@@ -24,13 +24,13 @@ Once your dependencies are download next would be set up your JWT authentication
 $ php artisan jwt:secret
 ```
 
-Now lets move to creating our tables by running the artisan migrations command along with the seeder to populate the Users table with a basic user account.
+Now lets move on to creating our tables by running the artisan migration command along with the seeder to populate the Users table with a basic user account.
 
 ```bash
 $ php artisan migrate:fresh --seed --seeder=UsersTableSeeder
 ```
 
-This would create all the basic tables to run your application soomthly. I have created a basic user account for easy to use in this case.
+This would create all the basic tables to run your application smoothly. I have created a basic user account for easy to use in this case.
 
 ```php
 // User account
