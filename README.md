@@ -1,6 +1,7 @@
 # Passenger Code Test
 
 An application to download and store postcodes and retrieve post codes on partial partial input (eg: M14 or M13 or AB10 or anything you wish you check for post codes) and postcodes on longitude and latitude entered. I have used laravel 10 framework to create the application and JWT to set up the authentication.
+I have used the application working around [postcodes.io](https://postcodes.io/) with validation. 
 
 ## Requirements
 
@@ -41,7 +42,7 @@ This would create all the basic tables to run your application smoothly. I have 
 
 ## Security
 
-For API authentication i implemented the JWT auth instead of using santum or OAuth. JSON Web Token (JWT) is an open standard that allows two parties to securely send data and information as JSON objects. This information can be verified and trusted because it is digitally signed. JWT authentication has aided the wider adoption of stateless API services.
+For API authentication / security i have implemented the JWT auth instead of using santum or OAuth. JSON Web Token (JWT) is an open standard that allows two parties to securely send data and information as JSON objects. This information can be verified and trusted because it is digitally signed. JWT authentication has aided the wider adoption of stateless API services.
 
 Once your dependencies are download and tables created next would be setting up your JWT authentication key in the .env or enviorment file. This can be accomplished by running the command below
 
@@ -57,6 +58,20 @@ JWT_SECRET=AYBKioTi6AOI1EOEMJkmrH8vHDquUnmot4ff6w7d4XBB3WC93ceqmSMJAtW8kxco
 
 ## Testing the Application
 
-# Task 1) 
+### Task 1) 
 
-The instructions were to download and import postcodes into a database
+The instructions were to download and import postcodes into a database through a console command. You can use the below command to enter a postcode and grab the details and it being stored in the database table 'post_codes'.
+
+```bash
+$ php artisan app:import-post-codes
+```
+
+### Task 2)
+
+The instructions were to enter a partial string matches (postcode) and grab the all possible postcodes and return back as a json response. I have used postman for testing my API end points created in the routes/api.php. Before checking you start to test the endpoint you will need to generate a JWT token inorder to see the controller in action found in app/Http/Controllers/PostCodesController.php
+
+```bash
+Url : <define your localhost with port/ virtual domain>localhost/api/login
+Params : email <already a user account with email created. Please refer the doc for the informations>
+		 password
+```
