@@ -2,12 +2,12 @@
 
 An application to download and store postcodes and retrieve post codes on partial partial input (eg: M14 or M13 or AB10 or anything you wish you check for post codes) and postcodes on longitude and latitude entered. I have used laravel 10 framework to create the application and JWT to set up the authentication.
 
-## Requirement
+## Requirements
 
-PHP :- 8 or above
-MySQL :-5 or above
-Composer :- To install the dependencies
-Postman :- To test the API calls
+- PHP :- 8 or above
+- MySQL :-5 or above
+- Composer :- To install the dependencies
+- Postman :- To test the API calls
 
 ## Install
 
