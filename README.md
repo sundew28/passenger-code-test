@@ -23,3 +23,17 @@ Once your dependencies are download next would be set up your JWT authentication
 ```bash
 $ php artisan jwt:secret
 ```
+
+Now lets move to creating our tables by running the artisan migrations command along with the seeder to populate the Users table with a basic user account.
+
+```bash
+$ php artisan migrate:fresh --seed --seeder=UsersTableSeeder
+```
+
+This would create all the basic tables to run your application soomthly. I have created a basic user account for easy to use in this case.
+
+```php
+// User account
+   Email : admin@passenger.tech
+   Password : adminadmin
+```
