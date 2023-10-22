@@ -2,6 +2,13 @@
 
 An application to download and store postcodes and retrieve post codes on partial partial input (eg: M14 or M13 or AB10 or anything you wish you check for post codes) and postcodes on longitude and latitude entered. I have used laravel 10 framework to create the application and JWT to set up the authentication.
 
+## Requirement
+
+PHP :- 8 or above
+MySQL :-5 or above
+Composer :- To install the dependencies
+Postman :- To test the API calls
+
 ## Install
 
 Clone the repo to your working directory using your favorite CLI console (eg: GitBash, PowerShell, cmd or any of your choice) 
@@ -41,3 +48,15 @@ Once your dependencies are download and tables created next would be setting up 
 ```bash
 $ php artisan jwt:secret
 ```
+
+Check your .env file if the secret key is generated an example like below
+```
+JWT_SECRET=AYBKioTi6AOI1EOEMJkmrH8vHDquUnmot4ff6w7d4XBB3WC93ceqmSMJAtW8kxco
+
+```
+
+## Testing the Application
+
+# Task 1) 
+
+The instructions were to download and import postcodes into a database
