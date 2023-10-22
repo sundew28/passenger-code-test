@@ -72,6 +72,7 @@ The instructions were to enter a partial string matches (postcode) and grab the 
 
 ```bash
 Url : <define your localhost with port/ virtual domain>localhost/api/login
-Params : email <already a user account with email created. Please refer the doc for the informations>
-		 password
+Params : 
+- email <already a user account with email created. Please refer the doc for the informations>,
+- password
 ```
