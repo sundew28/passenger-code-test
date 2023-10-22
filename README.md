@@ -1,6 +1,6 @@
 # Passenger Code Test
 
-An application to download and store postcodes and retrieve post codes on partial partial input (eg: M14 or M13 or AB10 or anything you wish you check for post codes) and postcodes on longitude and latitude entered. I have used laravel 10 framework to create the application and JWT to set up the authentication.
+An application to download and store postcodes and retrieve post codes on partial string matches (postcode) input (eg: M14 or M13 or AB10 or anything you wish you check for post codes) and postcodes on longitude and latitude entered. I have used laravel 10 framework to create the application and JWT to set up the authentication.
 I have used the application working around [postcodes.io](https://postcodes.io/) with validation. 
 
 ## Requirements
@@ -86,7 +86,7 @@ The API will return you with a secure token generated for use. Next you can use 
 Authorization --> Type (Select Bearer Token)
 ```
 
-The partial string can be send to the end point 'partialstring' through the Url :- http://passenger/api/partialstring which will return a Json response. for example like below.
+The partial string can be sent to the end point 'partialstring' through the Url :- http://passenger/api/partialstring which will return a Json response. for example like below. Else it will generate a error response.
 
 ```
 {
@@ -104,3 +104,188 @@ The partial string can be send to the end point 'partialstring' through the Url 
     ]
 }
 ```
+
+### Task 3)
+
+The instruction to return postcodes near a location for a given latitude and longitude. The endpoint to call is 'longlat' through the Url :- http://passenger/api/longlat which will return a Json response. for example like below. Else it will generate a error response.
+
+```
+ {
+        "postcode": "CM8 1EF",
+        "quality": 1,
+        "eastings": 581459,
+        "northings": 213679,
+        "country": "England",
+        "nhs_ha": "East of England",
+        "longitude": 0.629806,
+        "latitude": 51.792326,
+        "european_electoral_region": "Eastern",
+        "primary_care_trust": "Mid Essex",
+        "region": "East of England",
+        "lsoa": "Braintree 017F",
+        "msoa": "Braintree 017",
+        "incode": "1EF",
+        "outcode": "CM8",
+        "parliamentary_constituency": "Witham",
+        "admin_district": "Braintree",
+        "parish": "Witham",
+        "admin_county": "Essex",
+        "date_of_introduction": "198001",
+        "admin_ward": "Witham South",
+        "ced": "Witham Southern",
+        "ccg": "NHS Mid and South Essex",
+        "nuts": "Essex Haven Gateway",
+        "pfa": "Essex",
+        "codes": {
+            "admin_district": "E07000067",
+            "admin_county": "E10000012",
+            "admin_ward": "E05010388",
+            "parish": "E04012935",
+            "parliamentary_constituency": "E14001045",
+            "ccg": "E38000106",
+            "ccg_id": "06Q",
+            "ced": "E58000470",
+            "nuts": "TLH34",
+            "lsoa": "E01033460",
+            "msoa": "E02004462",
+            "lau2": "E07000067",
+            "pfa": "E23000028"
+        },
+        "distance": 0
+    },
+    {
+        "postcode": "CM8 1EU",
+        "quality": 1,
+        "eastings": 581508,
+        "northings": 213652,
+        "country": "England",
+        "nhs_ha": "East of England",
+        "longitude": 0.630501,
+        "latitude": 51.792068,
+        "european_electoral_region": "Eastern",
+        "primary_care_trust": "Mid Essex",
+        "region": "East of England",
+        "lsoa": "Braintree 017F",
+        "msoa": "Braintree 017",
+        "incode": "1EU",
+        "outcode": "CM8",
+        "parliamentary_constituency": "Witham",
+        "admin_district": "Braintree",
+        "parish": "Witham",
+        "admin_county": "Essex",
+        "date_of_introduction": "198001",
+        "admin_ward": "Witham South",
+        "ced": "Witham Southern",
+        "ccg": "NHS Mid and South Essex",
+        "nuts": "Essex Haven Gateway",
+        "pfa": "Essex",
+        "codes": {
+            "admin_district": "E07000067",
+            "admin_county": "E10000012",
+            "admin_ward": "E05010388",
+            "parish": "E04012935",
+            "parliamentary_constituency": "E14001045",
+            "ccg": "E38000106",
+            "ccg_id": "06Q",
+            "ced": "E58000470",
+            "nuts": "TLH34",
+            "lsoa": "E01033460",
+            "msoa": "E02004462",
+            "lau2": "E07000067",
+            "pfa": "E23000028"
+        },
+        "distance": 55.88754888
+    },
+    {
+        "postcode": "CM8 1PH",
+        "quality": 1,
+        "eastings": 581421,
+        "northings": 213740,
+        "country": "England",
+        "nhs_ha": "East of England",
+        "longitude": 0.629287,
+        "latitude": 51.792887,
+        "european_electoral_region": "Eastern",
+        "primary_care_trust": "Mid Essex",
+        "region": "East of England",
+        "lsoa": "Braintree 017H",
+        "msoa": "Braintree 017",
+        "incode": "1PH",
+        "outcode": "CM8",
+        "parliamentary_constituency": "Witham",
+        "admin_district": "Braintree",
+        "parish": "Witham",
+        "admin_county": "Essex",
+        "date_of_introduction": "198001",
+        "admin_ward": "Witham Central",
+        "ced": "Witham Southern",
+        "ccg": "NHS Mid and South Essex",
+        "nuts": "Essex Haven Gateway",
+        "pfa": "Essex",
+        "codes": {
+            "admin_district": "E07000067",
+            "admin_county": "E10000012",
+            "admin_ward": "E05012966",
+            "parish": "E04012935",
+            "parliamentary_constituency": "E14001045",
+            "ccg": "E38000106",
+            "ccg_id": "06Q",
+            "ced": "E58000470",
+            "nuts": "TLH34",
+            "lsoa": "E01033462",
+            "msoa": "E02004462",
+            "lau2": "E07000067",
+            "pfa": "E23000028"
+        },
+        "distance": 71.9607022
+    },
+    {
+        "postcode": "CM8 1PQ",
+        "quality": 1,
+        "eastings": 581399,
+        "northings": 213755,
+        "country": "England",
+        "nhs_ha": "East of England",
+        "longitude": 0.628977,
+        "latitude": 51.793028,
+        "european_electoral_region": "Eastern",
+        "primary_care_trust": "Mid Essex",
+        "region": "East of England",
+        "lsoa": "Braintree 017H",
+        "msoa": "Braintree 017",
+        "incode": "1PQ",
+        "outcode": "CM8",
+        "parliamentary_constituency": "Witham",
+        "admin_district": "Braintree",
+        "parish": "Witham",
+        "admin_county": "Essex",
+        "date_of_introduction": "198001",
+        "admin_ward": "Witham Central",
+        "ced": "Witham Southern",
+        "ccg": "NHS Mid and South Essex",
+        "nuts": "Essex Haven Gateway",
+        "pfa": "Essex",
+        "codes": {
+            "admin_district": "E07000067",
+            "admin_county": "E10000012",
+            "admin_ward": "E05012966",
+            "parish": "E04012935",
+            "parliamentary_constituency": "E14001045",
+            "ccg": "E38000106",
+            "ccg_id": "06Q",
+            "ced": "E58000470",
+            "nuts": "TLH34",
+            "lsoa": "E01033462",
+            "msoa": "E02004462",
+            "lau2": "E07000067",
+            "pfa": "E23000028"
+        },
+        "distance": 96.80988582
+    }
+```
+
+## Improvements
+
+- I would like to make improvement to the error capturing by making use of error handler in laravel, make use of JsonResponse error handling
+- Check the quality of code by using tools like PHPsniffer, PHP-CS-Fixer with PSR2 and Symfony standards (much extra checks, closer to Laravel than PSR2).
+- Righting test cases using PHPUnit functional and unit testing.
